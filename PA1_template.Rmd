@@ -45,7 +45,7 @@ Imputing missing values
 
     Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
 
-    Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. I use the mean for an interval to replace the missing values in that interval.
+    I use the mean for an interval to replace the missing values in that interval.
 
     Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
@@ -93,7 +93,7 @@ newdat <- cbind(newdat, wd)
 library(ggplot2)
 
 g <- ggplot(newdat, aes(interval, steps))
-p <- g + geom_point() + facet_grid(. ~ wd) + labs(title = "steps", y = "number of steps)")
+p <- g + geom_line() + facet_grid(. ~ wd) + labs(title = "steps", y = "number of steps)")
 print (p)
 
 ```

@@ -226,7 +226,7 @@ newdat <- cbind(newdat, wd)
 library(ggplot2)
 
 g <- ggplot(newdat, aes(interval, steps))
-p <- g + geom_point() + facet_grid(. ~ wd) + labs(title = "steps", y = "number of steps)")
+p <- g + geom_line() + facet_grid(. ~ wd) + labs(title = "steps", y = "number of steps)")
 print (p)
 ```
 
